@@ -1,0 +1,100 @@
+{
+	"Nebula Save Logs": {
+		"scope": "apex",
+		"prefix": "neb.save",
+		"body": [
+			"Nebula.Logger.saveLog();"
+		],
+		"description": "Save all of the log entries."
+	},
+
+	"Create Error LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.error",
+		"body": [
+			"Nebula.Logger.error('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == ERROR."
+	},
+
+	"Create Warn LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.warn",
+		"body": [
+			"Nebula.Logger.warn('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == WARN."
+	},
+
+	"Create Info LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.info",
+		"body": [
+			"Nebula.Logger.info('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == INFO."
+	},
+
+	"Create Debug LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.debug",
+		"body": [
+			"Nebula.Logger.debug('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == DEBUG."
+	},
+
+	"Create Fine LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.fine",
+		"body": [
+			"Nebula.Logger.fine('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == FINE."
+	},
+
+	"Create Finer LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.finer",
+		"body": [
+			"Nebula.Logger.finer('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == FINER."
+	},
+
+	"Create Finest LogEntry__c": {
+		"scope": "apex",
+		"prefix": "neb.finest",
+		"body": [
+			"Nebula.Logger.fine('$1', $2);"
+		],
+		"description": "Add log entry using Nebula Logger with logging level == FINEST."
+	},
+
+	"Get Nebula Transaction Id": {
+		"scope": "apex",
+		"prefix": "neb.get.transaction",
+		"body": [
+			"Nebula.Logger.getTransactionId()"
+		],
+		"description": "Gets current transaction Id."
+	},
+
+	"Set Nebula ParentLog Transaction Id": {
+		"scope": "apex",
+		"prefix": "neb.set.parent.transaction",
+		"body": [
+			"Nebula.Logger.setParentLogTransactionId($1);"
+		],
+		"description": "Sets the Log__c.ParentLog__c to related child Log__c records."
+	},
+
+	"Set Nebula Save Method": {
+		"scope": "apex",
+		"prefix": "neb.set.save.method",
+		"body": [
+			"Nebula.Logger.setSaveMethod(Nebula.Logger.SaveMethod.${1|EVENT_BUS,REST,QUEUEABLE,SYNCHRONOUS_DML|});"
+		],
+		"description": "Defines the Nebula Logger save method for the current transaction."
+	},
+}
